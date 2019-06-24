@@ -1,22 +1,16 @@
-
 import ephem
 import SatTracker.default as defaults
 from datetime import datetime
 import time
-import threading
 import SatTracker.helpers as helpers
 from SatTracker.helpers import *
 from SatTracker.printer import *
 import folium
 import pandas as pd
-# import cartopy.crs as ccrs
 import matplotlib.pyplot as plt
-# from cartopy.feature.nightshade import Nightshade
-from SatTracker.map3d import Map3d, TileLayer3d
 from geojson import Feature, Point, LineString
 import json
 import geojson
-# from flask import render_template
 
 
 class SatTracker:
@@ -188,7 +182,7 @@ class SatTracker:
         self.get_tle('KAZSTSAT', 'SatTracker/text_files/tle.txt')
 
         print("\nLoading TLE data.")
-        self.load_tle("..\SatTracker\\text_files\\tle.txt")
+        self.load_tle("SatTracker\\text_files\\tle.txt")
 
         print("\nGround longitude/latitude under that satellite now: ")
         for i in range(5):
@@ -200,7 +194,6 @@ class SatTracker:
             time.sleep(5.0)
             self.observer.date = datetime.utcnow()
 
-
     def find_realtime_coord(self):
         """
         Receive data for last calculation.
@@ -208,14 +201,14 @@ class SatTracker:
         Converting to string in 'geojson' format
         :return: creating and writing geojson.Point object to 'map.geojson' file
         """
-        data = pd.read_csv("..\SatTracker\\text_files\Sat_coordinates.csv")
+        data = pd.read_csv("SatTracker\\text_files\Sat_coordinates.csv")
         lat = data['LAT']
         lon = data['LON']
 
         point = Point([float(lon), float(lat)])
         feature = Feature(geometry=point)
         dump = geojson.dumps(feature, sort_keys=True)
-        with open("static\map.geojson", 'w') as file_object:
+        with open("SatTracker\static\map.geojson", 'w') as file_object:
             file_object.writelines(dump)
 
     def write_statistic(self):
@@ -223,7 +216,7 @@ class SatTracker:
         Write data to the "Sat_pass_stat.txt" for each calculation
         :return:
         """
-        with open("..\SatTracker\\text_files\\Sat_pass_stat.txt", 'a') as file_object:
+        with open("SatTracker\\text_files\\Sat_pass_stat.txt", 'a') as file_object:
             data = str(datetime.utcnow()) + "," + \
                    str(helpers.dms_to_deg(self.satellite.sublat)) + "," + \
                    str(helpers.dms_to_deg(self.satellite.sublong)) + "\n"
@@ -234,22 +227,10 @@ class SatTracker:
         Write data to "Sat_coordinates.csv" for last calculation
         :return:
         """
-        with open("..\SatTracker\\text_files\\Sat_coordinates.csv", 'w') as file_object:
+        with open("SatTracker\\text_files\\Sat_coordinates.csv", 'w') as file_object:
             header = "date,LAT,LON"
             data = str(datetime.utcnow()) + "," + \
                 str(helpers.dms_to_deg(self.satellite.sublat)) + "," + \
                 str(helpers.dms_to_deg(self.satellite.sublong)) + "\n"
             file_object.writelines(header+'\n')
             file_object.writelines(data)
-
-
-class MyThread(threading.Thread):
-    def __init__(self, threadID, name):
-        threading.Thread.__init__(self)
-        self.threadID = threadID
-        self.name = name
-
-    def run(self):
-        print("Starting " + self.name)
-        tracker = SatTracker()
-        tracker.activate()
