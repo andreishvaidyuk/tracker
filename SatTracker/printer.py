@@ -46,3 +46,23 @@ def print_gs_location(gs_location):
           "\nLatitude: " + str(helpers.dms_to_deg(gs_location.lat)) + '; ' +
           "\nLongitude: " + str(helpers.dms_to_deg(gs_location.lon)) + '; ' +
           "\nElevation: " + str(gs_location.elevation) + ' meters')
+
+
+def get_dict_of_sat_info(sat_coord_info):
+    """
+    Prepare satellite coordinates info in form of dictionary
+    :param sat_coord_info:
+    :return: dictionary
+    """
+    sat_info = {}
+    sat_info['Name'] = 'KAZSTSAT'
+    sat_info['Time'] = str(sat_coord_info[0])
+    sat_info['Latitude'] = str(sat_coord_info[1].sublat)
+    sat_info['Longitude'] = str(sat_coord_info[1].sublong)
+    sat_info['Altitude'] = str(sat_coord_info[1].alt * defaults.degrees_per_radian)
+    sat_info['Azimuth'] = str(sat_coord_info[1].az * defaults.degrees_per_radian)
+    sat_info['Geocentric height above sea level (km)'] = str(sat_coord_info[1].elevation / 1000)
+    sat_info['Distance from observer to satellite (km)'] = str(sat_coord_info[1].range / 1000)
+    sat_info['Range rate of change (m/s)'] = str(sat_coord_info[1].range_velocity)
+    sat_info['Whether satellite is in Earth’s shadow'] = str(sat_coord_info[1].eclipsed)
+    return sat_info

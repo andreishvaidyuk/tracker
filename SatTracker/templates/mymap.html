@@ -11,18 +11,44 @@
         </head>
     <body>
         <div>
-            <form action="http://127.0.0.1:5000/mymap" method="post">
+            <form action="" method="post">
+                <input type="text" class="satname" placeholder="Satellite name">
                 <input type="submit" name="start" value="Start survey">
                 <input type="submit" name="stop" value="Stop survey">
             </form>
 
+            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+
             <div id='map'>
 
             </div>
-            <div>
-                <table>
-
-                </table>
+            <div class="table">
+                <script type="text/javascript">
+                      var socket = io.connect('http://' + document.domain + ':' + location.port);
+                      socket.on( 'connect', function() {
+                        socket.emit( 'message', {
+                          data: 'User Connected'
+                        } )
+                        var form = $( 'form' ).on( 'submit', function( e ) {
+                          e.preventDefault()
+                          let sat_name = $( 'input.satname' ).val()
+                          socket.emit( 'my event', {
+                            satellite_name : sat_name,
+                          } )
+                          $( 'input.message' ).val( '' ).focus()
+                        } )
+                      } )
+                      socket.on( 'my response', function( msg ) {
+                        console.log( msg )
+                        if( typeof msg.Name !== 'undefined' )
+                        {
+                          $( 'div.table' ).append( '<div>'+msg.Latitude+'</div>' )
+                          $( 'div.table' ).append( '<div>'+msg.Longitude+'</div>' )
+                        }
+                      })
+                </script>
             </div>
 
 

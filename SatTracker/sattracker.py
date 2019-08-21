@@ -182,17 +182,17 @@ class SatTracker:
         self.get_tle('KAZSTSAT', 'SatTracker/text_files/tle.txt')
 
         print("\nLoading TLE data.")
-        self.load_tle("SatTracker\\text_files\\tle.txt")
+        self.load_tle("text_files\\tle.txt")
 
-        print("\nGround longitude/latitude under that satellite now: ")
-        for i in range(5):
-            sat_info = self.find_sat_coordinates_for_now()
-            print_sat_coordinates(sat_info)
-            self.write_statistic()
-            self.write_sat_coordinates()
-            self.find_realtime_coord()
-            time.sleep(5.0)
-            self.observer.date = datetime.utcnow()
+        # print("\nGround longitude/latitude under that satellite now: ")
+        # for i in range(5):
+        #     sat_info = self.find_sat_coordinates_for_now()
+        #     print_sat_coordinates(sat_info)
+        #     self.write_statistic()
+        #     self.write_sat_coordinates()
+        #     self.find_realtime_coord()
+        #     time.sleep(5.0)
+        #     self.observer.date = datetime.utcnow()
 
     def find_realtime_coord(self):
         """
@@ -201,14 +201,14 @@ class SatTracker:
         Converting to string in 'geojson' format
         :return: creating and writing geojson.Point object to 'map.geojson' file
         """
-        data = pd.read_csv("SatTracker\\text_files\Sat_coordinates.csv")
+        data = pd.read_csv("text_files\Sat_coordinates.csv")
         lat = data['LAT']
         lon = data['LON']
 
         point = Point([float(lon), float(lat)])
         feature = Feature(geometry=point)
         dump = geojson.dumps(feature, sort_keys=True)
-        with open("SatTracker\static\map.geojson", 'w') as file_object:
+        with open("static\map.geojson", 'w') as file_object:
             file_object.writelines(dump)
 
     def write_statistic(self):
@@ -216,7 +216,7 @@ class SatTracker:
         Write data to the "Sat_pass_stat.txt" for each calculation
         :return:
         """
-        with open("SatTracker\\text_files\\Sat_pass_stat.txt", 'a') as file_object:
+        with open("text_files\\Sat_pass_stat.txt", 'a') as file_object:
             data = str(datetime.utcnow()) + "," + \
                    str(helpers.dms_to_deg(self.satellite.sublat)) + "," + \
                    str(helpers.dms_to_deg(self.satellite.sublong)) + "\n"
@@ -227,7 +227,7 @@ class SatTracker:
         Write data to "Sat_coordinates.csv" for last calculation
         :return:
         """
-        with open("SatTracker\\text_files\\Sat_coordinates.csv", 'w') as file_object:
+        with open("text_files\\Sat_coordinates.csv", 'w') as file_object:
             header = "date,LAT,LON"
             data = str(datetime.utcnow()) + "," + \
                 str(helpers.dms_to_deg(self.satellite.sublat)) + "," + \
