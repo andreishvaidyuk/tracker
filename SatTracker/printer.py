@@ -61,8 +61,8 @@ def get_dict_of_sat_info(sat_coord_info):
     sat_info['Longitude'] = str(sat_coord_info[1].sublong)
     sat_info['Altitude'] = str(sat_coord_info[1].alt * defaults.degrees_per_radian)
     sat_info['Azimuth'] = str(sat_coord_info[1].az * defaults.degrees_per_radian)
-    sat_info['Geocentric height above sea level (km)'] = str(sat_coord_info[1].elevation / 1000)
-    sat_info['Distance from observer to satellite (km)'] = str(sat_coord_info[1].range / 1000)
-    sat_info['Range rate of change (m/s)'] = str(sat_coord_info[1].range_velocity)
-    sat_info['Whether satellite is in Earth’s shadow'] = str(sat_coord_info[1].eclipsed)
+    sat_info['Geocentric_height'] = str(sat_coord_info[1].elevation / 1000)
+    sat_info['Distance'] = str(sat_coord_info[1].range / 1000)
+    sat_info['Range_rate'] = str(sat_coord_info[1].range_velocity)
+    sat_info['Shadow'] = str(sat_coord_info[1].eclipsed)
     return sat_info

@@ -59,16 +59,19 @@ class SatTracker:
         :param destination: Place to save the data for later use (optional).
         :return:
         """
+
         data = helpers.parse_text_tle(sat_id, base_CELESTRAK_URL, CELESTRAK_paths)
         print(data)
-        if not data:
+        if data is None:
+            print("Satellite name not found.")
             return False
         try:
             if destination is not None:
                 with open(destination, 'w') as file_object:
                     w_data = [data[0] + "\n"] + [data[1] + "\n"] + [data[2] + "\n"]
                     file_object.writelines(w_data)
-            return True
+            return \
+                True
         except:
             pass
 
@@ -172,27 +175,18 @@ class SatTracker:
 
         map_simu.save("map.html")
 
-    def activate(self):
+    def activate(self, sat_name):
         self.isActive = True
         print("Setting ground segment Location.")
         gs_location = self.set_location()
         print_gs_location(gs_location)
 
         print("\nGetting TLE.")
-        self.get_tle('KAZSTSAT', 'SatTracker/text_files/tle.txt')
+        self.get_tle(sat_name, 'text_files/tle.txt')
 
         print("\nLoading TLE data.")
-        self.load_tle("text_files\\tle.txt")
+        self.load_tle("text_files/tle.txt")
 
-        # print("\nGround longitude/latitude under that satellite now: ")
-        # for i in range(5):
-        #     sat_info = self.find_sat_coordinates_for_now()
-        #     print_sat_coordinates(sat_info)
-        #     self.write_statistic()
-        #     self.write_sat_coordinates()
-        #     self.find_realtime_coord()
-        #     time.sleep(5.0)
-        #     self.observer.date = datetime.utcnow()
 
     def find_realtime_coord(self):
         """

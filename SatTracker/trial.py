@@ -26,7 +26,7 @@ def handle_my_custom_event(data, methods=['Get', 'Post']):
     sat_name = str(data['satellite_name'])
     print('Satellite name: ' + sat_name)
     tracker = SatTracker()
-    tracker.activate()
+    tracker.activate(sat_name)
     for i in range(5):
         sat_info = tracker.find_sat_coordinates_for_now()
         d = get_dict_of_sat_info(sat_info)
