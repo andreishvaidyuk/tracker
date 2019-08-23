@@ -2,21 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a536a0d3-9ce1-4c05-9346-887dff8a304b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/SatTracker/static/map.geojson" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SatTracker/static/onclick.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SatTracker/sattracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/SatTracker/sattracker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SatTracker/static/displaydata.js" beforeDir="false" afterPath="$PROJECT_DIR$/SatTracker/static/displaydata.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SatTracker/static/leafletmap.js" beforeDir="false" afterPath="$PROJECT_DIR$/SatTracker/static/leafletmap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SatTracker/static/map.geojson" beforeDir="false" afterPath="$PROJECT_DIR$/SatTracker/static/map.geojson" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SatTracker/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/SatTracker/static/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SatTracker/templates/mymap.html" beforeDir="false" afterPath="$PROJECT_DIR$/SatTracker/templates/mymap.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SatTracker/text_files/Sat_coordinates.csv" beforeDir="false" afterPath="$PROJECT_DIR$/SatTracker/text_files/Sat_coordinates.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SatTracker/text_files/Sat_pass_stat.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SatTracker/text_files/Sat_pass_stat.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SatTracker/text_files/tle.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SatTracker/text_files/tle.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trial.py" beforeDir="false" afterPath="$PROJECT_DIR$/trial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webinterface/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/webinterface/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webinterface/static/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/SatTracker/static/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webinterface/static/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/SatTracker/static/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webinterface/static/leafletmap.js" beforeDir="false" afterPath="$PROJECT_DIR$/SatTracker/static/leafletmap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webinterface/static/map.geojson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webinterface/templates/mymap.html" beforeDir="false" afterPath="$PROJECT_DIR$/SatTracker/templates/mymap.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webinterface/templates/welcome.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SatTracker/trial.py" beforeDir="false" afterPath="$PROJECT_DIR$/SatTracker/trial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracvenv/pip-selfcheck.json" beforeDir="false" afterPath="$PROJECT_DIR$/tracvenv/pip-selfcheck.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,81 +26,127 @@
     <session id="-2031174775">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.4" value="1" />
           <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="geojson" value="1" />
-          <entry key="html" value="4" />
-          <entry key="js" value="2" />
-          <entry key="py" value="7" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="HTML" value="4" />
-          <entry key="JavaScript" value="2" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="72" />
-          <entry key="js" value="277" />
-          <entry key="py" value="511" />
+          <entry key="css" value="76" />
+          <entry key="html" value="682" />
+          <entry key="js" value="311" />
+          <entry key="py" value="1966" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="72" />
-          <entry key="JavaScript" value="277" />
-          <entry key="Python" value="511" />
+          <entry key="CSS" value="76" />
+          <entry key="HTML" value="682" />
+          <entry key="JavaScript" value="311" />
+          <entry key="Python" value="1966" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="css" value="2" />
+          <entry key="csv" value="2" />
+          <entry key="geojson" value="4" />
+          <entry key="html" value="8" />
+          <entry key="js" value="8" />
+          <entry key="py" value="20" />
+          <entry key="txt" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="2" />
+          <entry key="HTML" value="8" />
+          <entry key="JavaScript" value="8" />
+          <entry key="PLAIN_TEXT" value="10" />
+          <entry key="Python" value="20" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages">
+        <counts>
+          <entry key="git.branch.checkout.local" value="3" />
+          <entry key="git.branch.compare" value="1" />
+          <entry key="git.branch.create.new" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SatTracker/sattracker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="215" column="30" selection-start-line="215" selection-start-column="30" selection-end-line="215" selection-end-column="30" />
+            <state relative-caret-position="235">
+              <caret line="178" column="7" lean-forward="true" selection-start-line="178" selection-start-column="7" selection-end-line="178" selection-end-column="28" />
               <folding>
-                <element signature="e#1#13#0" expanded="true" />
-                <element signature="e#565#1107#0" />
-                <element signature="e#1181#2103#0" />
-                <element signature="e#2162#2842#0" />
-                <element signature="e#2886#3272#0" />
-                <element signature="e#3333#3707#0" />
-                <element signature="e#3761#4044#0" />
-                <element signature="e#4091#4551#0" />
-                <element signature="e#4586#5148#0" />
-                <element signature="e#5187#6416#0" />
-                <element signature="e#6450#7195#0" />
-                <element signature="e#9181#9610#0" />
-                <element signature="e#9657#10164#0" />
+                <element signature="e#0#12#0" expanded="true" />
+                <element signature="e#1004#1926#0" />
+                <element signature="e#1985#2674#0" />
+                <element signature="e#2709#3095#0" />
+                <element signature="e#3156#3530#0" />
+                <element signature="e#3584#3867#0" />
+                <element signature="e#3914#4374#0" />
+                <element signature="e#4409#4971#0" />
+                <element signature="e#5010#6239#0" />
+                <element signature="e#7060#7691#0" />
+                <element signature="e#7732#8158#0" />
+                <element signature="e#8205#8709#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/trial.py">
+        <entry file="file://$PROJECT_DIR$/SatTracker/trial.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="323">
+              <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="30" />
+              <folding>
+                <element signature="e#1#59#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SatTracker/static/displaydata.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="32" column="41" lean-forward="true" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SatTracker/templates/mymap.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="935">
+              <caret line="90" column="32" selection-start-line="90" selection-start-column="24" selection-end-line="90" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -110,8 +154,22 @@
         <option value="$PROJECT_DIR$/webinterface/static/onclick.js" />
         <option value="$PROJECT_DIR$/webinterface/app.py" />
         <option value="$PROJECT_DIR$/webinterface/templates/mymap.html" />
+        <option value="$PROJECT_DIR$/__init__.py" />
+        <option value="$PROJECT_DIR$/client.py" />
+        <option value="$PROJECT_DIR$/SatTracker/helpers.py" />
+        <option value="$PROJECT_DIR$/SatTracker/sessions.html" />
+        <option value="$PROJECT_DIR$/templates/sessions.html" />
         <option value="$PROJECT_DIR$/trial.py" />
+        <option value="$PROJECT_DIR$/server.py" />
+        <option value="$PROJECT_DIR$/SatTracker/templates/index.html" />
+        <option value="$PROJECT_DIR$/SatTracker/.gitignore.py" />
+        <option value="$PROJECT_DIR$/SatTracker/printer.py" />
         <option value="$PROJECT_DIR$/SatTracker/sattracker.py" />
+        <option value="$PROJECT_DIR$/SatTracker/static/leafletmap.js" />
+        <option value="$PROJECT_DIR$/SatTracker/trial.py" />
+        <option value="$PROJECT_DIR$/SatTracker/static/style.css" />
+        <option value="$PROJECT_DIR$/SatTracker/templates/mymap.html" />
+        <option value="$PROJECT_DIR$/SatTracker/static/displaydata.js" />
       </list>
     </option>
   </component>
@@ -144,6 +202,12 @@
               <item name="tracker" type="b2602c69:ProjectViewProjectNode" />
               <item name="tracker" type="462c0819:PsiDirectoryNode" />
               <item name="SatTracker" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tracker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tracker" type="462c0819:PsiDirectoryNode" />
+              <item name="SatTracker" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -158,23 +222,28 @@
               <item name="SatTracker" type="462c0819:PsiDirectoryNode" />
               <item name="text_files" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="tracker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tracker" type="462c0819:PsiDirectoryNode" />
-              <item name="webinterface" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
     </panes>
   </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../profitgroup" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\a.shvaidyuk\PythonProjects\tracker\SatTracker" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\a.shvaidyuk\PythonProjects\tracker" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\a.shvaidyuk\PythonProjects\tracker\SatTracker" />
+      <recent name="C:\Users\a.shvaidyuk\PythonProjects\tracker\SatTracker\templates" />
+      <recent name="C:\Users\a.shvaidyuk\PythonProjects\tracker\templates" />
+      <recent name="C:\Users\a.shvaidyuk\PythonProjects\tracker\SatTracker\static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -189,7 +258,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.trial">
+  <component name="RunManager" selected="Python.trial (1)">
     <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="tracker" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -202,7 +271,29 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/webinterface/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="trial (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="tracker" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SatTracker" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SatTracker/trial.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -223,7 +314,8 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/trial.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\a.shvaidyuk\PythonProjects\tracker\SatTracker\trial.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -235,9 +327,13 @@
     <list>
       <item itemvalue="Python.app" />
       <item itemvalue="Python.trial" />
+      <item itemvalue="Python.trial (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.trial (1)" />
+        <item itemvalue="Python.trial" />
+        <item itemvalue="Python.app" />
         <item itemvalue="Python.trial" />
         <item itemvalue="Python.app" />
       </list>
@@ -253,54 +349,60 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1561391150715</updated>
+      <workItem from="1563171049633" duration="7720000" />
+      <workItem from="1563540608379" duration="1022000" />
+      <workItem from="1565166214460" duration="13143000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="21885000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24983476" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16332982" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" weight="0.3286119" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32827735" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32827735" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="SciView" order="4" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.js" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/tracker$trial.coverage" NAME="trial Coverage Results" MODIFIED="1565260379691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/map.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/SatTracker/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/SatTracker/static/leafletmap.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SatTracker/templates/welcome.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/SatTracker/templates/welcome.html" />
     <entry file="file://$PROJECT_DIR$/SatTracker/static/onclick.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -308,52 +410,164 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SatTracker/static/map.geojson">
+    <entry file="file://$PROJECT_DIR$/webinterface/app.py" />
+    <entry file="file://$PROJECT_DIR$/map.html" />
+    <entry file="file://$PROJECT_DIR$/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/webinterface/app.py">
+    <entry file="file://$PROJECT_DIR$/SatTracker/text_files/Sat_pass_stat.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" column="25" lean-forward="true" selection-start-line="42" selection-start-column="2" selection-end-line="43" selection-end-column="25" />
+        <state relative-caret-position="-18672" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../django-channels/channenv/Scripts/django-admin.py" />
+    <entry file="file://$PROJECT_DIR$/requirement.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SatTracker/templates/sessions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="15" lean-forward="true" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
           <folding>
-            <element signature="e#0#68#0" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/trial.py">
+    <entry file="file://$PROJECT_DIR$/SatTracker/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="391">
+          <caret line="23" column="26" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SatTracker/templates/mymap.html">
+    <entry file="file://$PROJECT_DIR$/client.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="34" column="4" lean-forward="true" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="55" />
+        <state relative-caret-position="272">
+          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="29" column="42" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SatTracker/default.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SatTracker/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SatTracker/printer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="65" column="24" selection-start-line="65" selection-start-column="14" selection-end-line="65" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SatTracker/text_files/Sat_coordinates.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SatTracker/helpers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="34" column="20" lean-forward="true" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+          <folding>
+            <element signature="e#2#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SatTracker/text_files/tle.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SatTracker/static/leafletmap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="26" lean-forward="true" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SatTracker/static/map.geojson">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="42" selection-start-column="42" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SatTracker/trial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="30" />
+          <folding>
+            <element signature="e#1#59#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SatTracker/sattracker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="215" column="30" selection-start-line="215" selection-start-column="30" selection-end-line="215" selection-end-column="30" />
+        <state relative-caret-position="235">
+          <caret line="178" column="7" lean-forward="true" selection-start-line="178" selection-start-column="7" selection-end-line="178" selection-end-column="28" />
           <folding>
-            <element signature="e#1#13#0" expanded="true" />
-            <element signature="e#565#1107#0" />
-            <element signature="e#1181#2103#0" />
-            <element signature="e#2162#2842#0" />
-            <element signature="e#2886#3272#0" />
-            <element signature="e#3333#3707#0" />
-            <element signature="e#3761#4044#0" />
-            <element signature="e#4091#4551#0" />
-            <element signature="e#4586#5148#0" />
-            <element signature="e#5187#6416#0" />
-            <element signature="e#6450#7195#0" />
-            <element signature="e#9181#9610#0" />
-            <element signature="e#9657#10164#0" />
+            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#1004#1926#0" />
+            <element signature="e#1985#2674#0" />
+            <element signature="e#2709#3095#0" />
+            <element signature="e#3156#3530#0" />
+            <element signature="e#3584#3867#0" />
+            <element signature="e#3914#4374#0" />
+            <element signature="e#4409#4971#0" />
+            <element signature="e#5010#6239#0" />
+            <element signature="e#7060#7691#0" />
+            <element signature="e#7732#8158#0" />
+            <element signature="e#8205#8709#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SatTracker/static/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SatTracker/templates/mymap.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="90" column="32" selection-start-line="90" selection-start-column="24" selection-end-line="90" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SatTracker/static/displaydata.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="32" column="41" lean-forward="true" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
         </state>
       </provider>
     </entry>

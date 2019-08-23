@@ -47,12 +47,5 @@ window.onload = function () {
                 }
             });
 
-//            map.on("click", function(e){
-//                new mapboxgl.Popup()
-//                .setLngLat()
-//                .setHTML()
-//                .addTo(map)
-//            });
-
         });
 };

@@ -18,41 +18,32 @@ def sessions():
 
 @socketio.on('message')
 def message_received(message, methods=['Get', 'Post']):
-    print('message was received: ' + message['data'])
+    print(message['data'])
 
 
-@socketio.on('my event')
-def handle_my_custom_event(data, methods=['Get', 'Post']):
-    sat_name = str(data['satellite_name'])
+@socketio.on('start')
+def start_observation(satellite, methods=['Get', 'Post']):
+    sat_name = str(satellite['satellite_name'])
     print('Satellite name: ' + sat_name)
     tracker = SatTracker()
     tracker.activate(sat_name)
     for i in range(5):
         sat_info = tracker.find_sat_coordinates_for_now()
         d = get_dict_of_sat_info(sat_info)
-        data2 = json.dumps(d)
+        data = json.dumps(d)
         print_sat_coordinates(sat_info)
         tracker.write_statistic()
         tracker.write_sat_coordinates()
         tracker.find_realtime_coord()
         time.sleep(5.0)
         tracker.observer.date = datetime.utcnow()
+        emit('my response', data)
 
-        emit('my response', data2)
+
+@socketio.on('stop')
+def stop_observation():
+    pass
 
 
 if __name__ == '__main__':
     socketio.run(app, debug=True)
-
-
-#
-# from SatTracker.sattracker import *
-#
-#
-# def main():
-#     tracker = SatTracker()
-#     tracker.activate()
-#
-#
-# if __name__ == '__main__':
-#     main()
