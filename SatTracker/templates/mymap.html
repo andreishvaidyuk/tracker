@@ -2,20 +2,23 @@
 <html>
     <head>
         <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-        <!-- Mapbox-gl CSS -->
         <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js'></script>
         <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css' rel='stylesheet' />
+
         <style>
             body { margin:10; padding:10; }
             #map { width:1200px; height:800px; top:0; bottom:0; }
-            table, th, td {border: 1px solid black; border-collapse: collapse;}
         </style>
-        </head>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    </head>
     <body>
         <div>
             <form action="" method="post">
@@ -23,85 +26,59 @@
                 <input type="submit" name="start" value="Start observation">
                 <input type="submit" name="stop" value="Stop observation">
             </form>
+        </div>
 
-            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+        <div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div id='map'>
 
-            <div class="row">
-                <div class="col-8">
-                    <div id='map'>
-
+                        </div>
                     </div>
-                </div>
 
-                <div class="col-4">
-                    <div id="table">
-                        <table class="table table-sm" >
-                            <!--<thead class="thead-light">-->
-                                <!--<tr>-->
-                                    <!--<th scope="col">#</th>-->
-                                    <!--<th scope="col">Показатель</th>-->
-                                    <!--<th scope="col">Значение</th>-->
-                                <!--</tr>-->
-                            <!--</thead>-->
-                            <!--<tbody>-->
-                                <!--<tr>-->
-                                    <!--<th scope="row">1</th>-->
-                                    <!--<td>Satellite name</td>-->
-                                    <!--<td></td>-->
-                                <!--</tr>-->
-                                <!--<tr>-->
-                                    <!--<th scope="row">2</th>-->
-                                    <!--<td>Time</td>-->
-                                    <!--<td></td>-->
-                                <!--</tr>-->
-                                <!--<tr>-->
-                                    <!--<th scope="row">3</th>-->
-                                    <!--<td>Latitude</td>-->
-                                    <!--<td></td>-->
-                                <!--</tr>-->
-                                <!--<tr>-->
-                                    <!--<th scope="row">4</th>-->
-                                    <!--<td>Longitude</td>-->
-                                    <!--<td></td>-->
-                                <!--</tr>-->
-                                <!--<tr>-->
-                                    <!--<th scope="row">5</th>-->
-                                    <!--<td>Altitude</td>-->
-                                    <!--<td></td>-->
-                                <!--</tr>-->
-                                <!--<tr>-->
-                                    <!--<th scope="row">6</th>-->
-                                    <!--<td>Azimuth</td>-->
-                                    <!--<td></td>-->
-                                <!--</tr>-->
-                                <!--<tr>-->
-                                    <!--<th scope="row">7</th>-->
-                                    <!--<td>Geocentric height above sea level (km)</td>-->
-                                    <!--<td></td>-->
-                                <!--</tr>-->
-                                <!--<tr>-->
-                                    <!--<th scope="row">8</th>-->
-                                    <!--<td>Whether satellite is in Earth’s shadow</td>-->
-                                    <!--<td></td>-->
-                                <!--</tr>-->
-                            <!--</tbody>-->
 
+                    <div class="col-lg-4">
+                        <table class="table">
+                            <tr>
+                                <th>Name</th>
+                                <th>Data</th>
+                            </tr>
+                            <tr>
+                                <td >Date</td>
+                                <td class="date"></td>
+                            </tr>
+                            <tr>
+                                <td>Latitude</td>
+                                <td class="latitude"></td>
+                            </tr>
+                            <tr>
+                                <td>Longitude</td>
+                                <td class="longitude"></td>
+                            </tr>
+                            <tr>
+                                <td>Altitude</td>
+                                <td class="altitude"></td>
+                            </tr>
+                            <tr>
+                                <td>Azimuth</td>
+                                <td class="azimuth"></td>
+                            </tr>
+                            <tr>
+                                <td>Geocentric height above sea level (km)</td>
+                                <td class="height"></td>
+                            </tr>
+                            <tr>
+                                <td>Whether satellite is in Earth’s shadow</td>
+                                <td class="inShadow"></td>
+                            </tr>
                         </table>
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
         </div>
 
-
     </body>
-    <script src='../static/leafletmap.js'></script>
     <script src='../static/displaydata.js'></script>
+    <script src='../static/leafletmap.js'></script>
 </html>

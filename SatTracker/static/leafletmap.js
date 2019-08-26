@@ -7,11 +7,11 @@ window.onload = function () {
             zoom: 1.1,
         });
 
-        var url = 'static/map.geojson';
+        var url = '../static/map.geojson';
         map.on('load', function () {
             window.setInterval(function() {
                 map.getSource('satellite').setData(url);
-            }, 1000);
+            }, 5000);
 
             map.addLayer({
                 "id": "satellite",
@@ -46,6 +46,5 @@ window.onload = function () {
                     "icon-image": "place-of-worship-15"
                 }
             });
-
         });
 };
