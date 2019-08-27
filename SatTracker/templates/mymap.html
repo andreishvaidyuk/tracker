@@ -6,8 +6,14 @@
         <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css' rel='stylesheet' />
 
         <style>
-            body { margin:10; padding:10; }
-            #map { width:1200px; height:800px; top:0; bottom:0; }
+            #map { width:100%; height:760px;}
+            .table {width:100%}
+            #form {width:100%; margin: 15px;}
+            footer {
+              bottom: 0;
+              width: 100%;
+              height: 30px;
+            }
         </style>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -20,10 +26,17 @@
 
     </head>
     <body>
-        <div>
-            <form action="" method="post">
+        <H2 align="center">
+            Satellite Observation
+        </H2>
+
+        <div id="form">
+            <form id="start_form" action="" method="post">
                 <input type="text" class="satname" placeholder="Satellite name">
                 <input type="submit" name="start" value="Start observation">
+            </form>
+
+            <form id="stop_form" action="" method="post">
                 <input type="submit" name="stop" value="Stop observation">
             </form>
         </div>
@@ -31,17 +44,17 @@
         <div>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-8">
+                    <div class="col-lg-9">
                         <div id='map'>
 
                         </div>
                     </div>
 
 
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                         <table class="table">
                             <tr>
-                                <th>Name</th>
+                                <th>Parameter</th>
                                 <th>Data</th>
                             </tr>
                             <tr>
@@ -49,12 +62,12 @@
                                 <td class="date"></td>
                             </tr>
                             <tr>
-                                <td>Latitude</td>
-                                <td class="latitude"></td>
-                            </tr>
-                            <tr>
                                 <td>Longitude</td>
                                 <td class="longitude"></td>
+                            </tr>
+                            <tr>
+                                <td>Latitude</td>
+                                <td class="latitude"></td>
                             </tr>
                             <tr>
                                 <td>Altitude</td>
@@ -77,6 +90,10 @@
                 </div>
             </div>
         </div>
+
+        <footer >
+            <p align="center">&copy; Made by Andrey Shvaidyuk</p>
+        </footer>
 
     </body>
     <script src='../static/displaydata.js'></script>

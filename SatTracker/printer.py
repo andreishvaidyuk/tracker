@@ -1,5 +1,6 @@
 from SatTracker import helpers
 import SatTracker.default as defaults
+from datetime import datetime
 
 
 def print_sat_coordinates(sat_coord_info):
@@ -14,8 +15,6 @@ def print_sat_coordinates(sat_coord_info):
           "\nAltitude: " + str(sat_coord_info[1].alt * defaults.degrees_per_radian),
           "\nAzimuth: " + str(sat_coord_info[1].az * defaults.degrees_per_radian),
           "\nGeocentric height above sea level (km): " + str(sat_coord_info[1].elevation/1000),
-          "\nDistance from observer to satellite (km): " + str(sat_coord_info[1].range/1000),
-          "\nRange rate of change (m/s): " + str(sat_coord_info[1].range_velocity),
           "\nWhether satellite is in Earth’s shadow: " + str(sat_coord_info[1].eclipsed),
           "\n"
           )
@@ -54,15 +53,13 @@ def get_dict_of_sat_info(sat_coord_info):
     :param sat_coord_info:
     :return: dictionary
     """
-    sat_info = {}
-    sat_info['Name'] = 'KAZSTSAT'
-    sat_info['Time'] = str(sat_coord_info[0])
-    sat_info['Latitude'] = str(sat_coord_info[1].sublat)
+    sat_info = dict()
+    sat_info['Name'] = ''
+    sat_info['Time'] = str('{:%Y-%m-%d %H:%M:%S}'.format(sat_coord_info[0]))
     sat_info['Longitude'] = str(sat_coord_info[1].sublong)
-    sat_info['Altitude'] = str(sat_coord_info[1].alt * defaults.degrees_per_radian)
-    sat_info['Azimuth'] = str(sat_coord_info[1].az * defaults.degrees_per_radian)
-    sat_info['Geocentric_height'] = str(sat_coord_info[1].elevation / 1000)
-    sat_info['Distance'] = str(sat_coord_info[1].range / 1000)
-    sat_info['Range_rate'] = str(sat_coord_info[1].range_velocity)
+    sat_info['Latitude'] = str(sat_coord_info[1].sublat)
+    sat_info['Altitude'] = str('{:05.2f}'.format(sat_coord_info[1].alt * defaults.degrees_per_radian))
+    sat_info['Azimuth'] = str('{:06.2f}'.format(sat_coord_info[1].az * defaults.degrees_per_radian))
+    sat_info['Geocentric_height'] = str('{:06.2f}'.format(sat_coord_info[1].elevation / 1000))
     sat_info['Shadow'] = str(sat_coord_info[1].eclipsed)
     return sat_info

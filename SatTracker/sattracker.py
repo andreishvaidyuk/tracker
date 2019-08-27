@@ -187,7 +187,6 @@ class SatTracker:
         print("\nLoading TLE data.")
         self.load_tle("text_files/tle.txt")
 
-
     def find_realtime_coord(self):
         """
         Receive data for last calculation.

@@ -4,13 +4,19 @@ var socket = io.connect('http://' + document.domain + ':' + location.port);
         socket.emit( 'message', {
           data: 'User Connected'
         } )
-        var form = $( 'form' ).on( 'submit', function( e ) {
+        var form = $( '#start_form' ).on( 'submit', function( e ) {
           e.preventDefault()
           let sat_name = $( 'input.satname' ).val()
           socket.emit( 'start', {
             satellite_name : sat_name,
           } )
-          $( 'input.message' ).val( '' ).focus()
+        } )
+        var form = $( '#stop_form' ).on( 'submit', function( e ) {
+          e.preventDefault()
+          let sat_name = $( 'input.satname' ).val()
+          socket.emit( 'stop', {
+            satellite_name : sat_name,
+          } )
         } )
       } )
       socket.on( 'my response', function( msg ) {
