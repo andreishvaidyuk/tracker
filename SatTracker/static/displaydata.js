@@ -20,12 +20,9 @@ var socket = io.connect('http://' + document.domain + ':' + location.port);
         } )
       } )
       socket.on( 'my response', function( msg ) {
-        console.log( msg )
         var obj = JSON.parse(msg)
         if( typeof obj.Name !== 'undefined' )
         {
-
-
           $( '.date' ).text(obj.Time)
           $( '.latitude' ).text(obj.Latitude)
           $( '.longitude' ).text(obj.Longitude)
@@ -34,4 +31,7 @@ var socket = io.connect('http://' + document.domain + ':' + location.port);
           $( '.height' ).text(obj.Geocentric_height)
           $( '.inShadow' ).text(obj.Shadow)
         }
+      })
+      socket.on('response', function(msg){
+        confirm(msg)
       })

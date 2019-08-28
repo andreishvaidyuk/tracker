@@ -62,16 +62,12 @@ class SatTracker:
 
         data = helpers.parse_text_tle(sat_id, base_CELESTRAK_URL, CELESTRAK_paths)
         print(data)
-        if data is None:
-            print("Satellite name not found.")
-            return False
         try:
             if destination is not None:
                 with open(destination, 'w') as file_object:
                     w_data = [data[0] + "\n"] + [data[1] + "\n"] + [data[2] + "\n"]
                     file_object.writelines(w_data)
-            return \
-                True
+            return True
         except:
             pass
 
@@ -139,41 +135,41 @@ class SatTracker:
         next_pass_info = [n, self.observer.date]
         return next_pass_info
 
-    def visualization(self):
-        map_simu = folium.Map(location=defaults.gs_location,
-                              zoom_start=2.2,
-                              control_scale=True,
-                              prefer_canvas=True,
-                              )
-
-        data = pd.read_csv("SatTracker\\text_files\Sat_coordinates.csv")
-        lat = data['LAT']
-        lon = data['LON']
-
-        antenna_icon = folium.features.CustomIcon('SatTracker\\images\\antenna.png', icon_size=(25, 25))
-        satellite_icon = folium.features.CustomIcon('SatTracker\\images\\satellite.png', icon_size=(25, 25))
-
-        # Marker for Ground station
-        folium.Marker(
-            location=[float(self.location['latitude']), float(self.location['longitude'])],
-            icon=antenna_icon
-        ).add_to(map_simu)
-
-        # Circle marker
-        folium.CircleMarker(
-            location=[float(self.location['latitude']), float(self.location['longitude'])],
-            radius=100,
-            color='red',
-            fill_color='blue'
-        ).add_to(map_simu)
-
-        # Marker for satellite
-        folium.Marker(
-            location=[float(lat), float(lon)],
-            icon=satellite_icon
-        ).add_to(map_simu),
-
-        map_simu.save("map.html")
+    # def visualization(self):
+    #     map_simu = folium.Map(location=defaults.gs_location,
+    #                           zoom_start=2.2,
+    #                           control_scale=True,
+    #                           prefer_canvas=True,
+    #                           )
+    #
+    #     data = pd.read_csv("SatTracker\\text_files\Sat_coordinates.csv")
+    #     lat = data['LAT']
+    #     lon = data['LON']
+    #
+    #     antenna_icon = folium.features.CustomIcon('SatTracker\\images\\antenna.png', icon_size=(25, 25))
+    #     satellite_icon = folium.features.CustomIcon('SatTracker\\images\\satellite.png', icon_size=(25, 25))
+    #
+    #     # Marker for Ground station
+    #     folium.Marker(
+    #         location=[float(self.location['latitude']), float(self.location['longitude'])],
+    #         icon=antenna_icon
+    #     ).add_to(map_simu)
+    #
+    #     # Circle marker
+    #     folium.CircleMarker(
+    #         location=[float(self.location['latitude']), float(self.location['longitude'])],
+    #         radius=100,
+    #         color='red',
+    #         fill_color='blue'
+    #     ).add_to(map_simu)
+    #
+    #     # Marker for satellite
+    #     folium.Marker(
+    #         location=[float(lat), float(lon)],
+    #         icon=satellite_icon
+    #     ).add_to(map_simu),
+    #
+    #     map_simu.save("map.html")
 
     def activate(self, sat_name):
         self.isActive = True
